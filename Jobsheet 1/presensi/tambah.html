@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Input Presensi — AbsenUKM</title>
+</head>
+<body>
+
+  <header>
+    <h1>AbsenUKM</h1>
+    <p>Sistem Absensi Unit Kegiatan Mahasiswa</p>
+  </header>
+
+  <nav aria-label="Navigasi utama">
+    <ul>
+      <li><a href="../index.html">Beranda</a></li>
+      <li><a href="../anggota/list.html">Daftar Anggota</a></li>
+      <li><a href="../anggota/tambah.html">Tambah Anggota</a></li>
+      <li><a href="list.html">Rekap Presensi</a></li>
+      <li><a href="tambah.html">Input Presensi</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section id="form-input-presensi">
+      <h2>Input Presensi</h2>
+  
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Data Kegiatan</legend>
+
+          <p>
+            <label for="tanggal">Tanggal</label>
+            <input type="date" id="tanggal" name="tanggal" required>
+          </p>
+
+          <p>
+            <label for="nama_kegiatan">Nama Kegiatan</label>
+            <input type="text" id="nama_kegiatan" name="nama_kegiatan" placeholder="Latihan Rutin" required>
+          </p>
+
+          <p>
+            <label for="lokasi">Lokasi</label>
+            <input type="text" id="lokasi" name="lokasi" placeholder="Sekretariat UKM">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Data Kehadiran</legend>
+
+          <p>
+            <label for="nim">NIM Anggota</label>
+            <input type="text" id="nim" name="nim" placeholder="23081010001" required>
+          </p>
+
+          <p>
+            <label for="nama">Nama Anggota</label>
+            <input type="text" id="nama" name="nama" placeholder="Rina Marlina">
+          </p>
+
+          <p>
+            <label for="jam_datang">Jam Datang</label>
+            <input type="time" id="jam_datang" name="jam_datang">
+          </p>
+
+          <p>
+            <label for="keterangan">Keterangan</label>
+            <select id="keterangan" name="keterangan">
+              <option value="hadir">Hadir</option>
+              <option value="izin">Izin</option>
+              <option value="sakit">Sakit</option>
+              <option value="alfa">Alfa</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="catatan">Catatan</label>
+            <textarea id="catatan" name="catatan" rows="4" cols="40" placeholder="Alasan izin, keterangan terlambat, dll."></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Simpan</button>
+          <button type="reset">Reset</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 AbsenUKM — Jobsheet 1</p>
+  </footer>
+
+</body>
+</html>
