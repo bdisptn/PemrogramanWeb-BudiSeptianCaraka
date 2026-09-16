@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tambah Anggota — AbsenUKM</title>
+  <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <h1>AbsenUKM</h1>
+      <p>Sistem Absensi Unit Kegiatan Mahasiswa</p>
+    </div>
+    <nav aria-label="Navigasi utama">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+      <ul>
+      <li><a href="../index.html">Beranda</a></li>
+      <li><a href="list.html">Daftar Anggota</a></li>
+      <li><a href="tambah.html">Tambah Anggota</a></li>
+      <li><a href="../presensi/list.html">Rekap Presensi</a></li>
+      <li><a href="../presensi/tambah.html">Input Presensi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="form-tambah-anggota">
+      <h2>Tambah Anggota</h2>
+      <p>Form ini belum diproses. Nama atribut <code>name</code> dan <code>id</code> akan dipakai kembali pada jobsheet berikutnya.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Identitas Mahasiswa</legend>
+
+          <p>
+            <label for="nim">NIM</label>
+            <input type="text" id="nim" name="nim" placeholder="23081010001" required>
+          </p>
+
+          <p>
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" name="nama" placeholder="Rina Marlina" required>
+          </p>
+
+          <p>
+            <label for="prodi">Program Studi</label>
+            <input type="text" id="prodi" name="prodi" placeholder="Sistem Informasi">
+          </p>
+
+          <p>
+            <label for="angkatan">Angkatan</label>
+            <input type="number" id="angkatan" name="angkatan" min="2015" max="2026" placeholder="2023">
+          </p>
+
+          <p>
+            <label for="jenis_kelamin">Jenis Kelamin</label>
+            <select id="jenis_kelamin" name="jenis_kelamin">
+              <option value="L">Laki-laki</option>
+              <option value="P">Perempuan</option>
+            </select>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Keanggotaan UKM</legend>
+
+          <p>
+            <label for="divisi">Divisi</label>
+            <select id="divisi" name="divisi">
+              <option value="pengurus_inti">Pengurus Inti</option>
+              <option value="acara">Acara</option>
+              <option value="humas">Humas</option>
+              <option value="perlengkapan">Perlengkapan</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="tanggal_gabung">Tanggal Bergabung</label>
+            <input type="date" id="tanggal_gabung" name="tanggal_gabung">
+          </p>
+
+          <p>
+            <label for="no_hp">No. HP</label>
+            <input type="tel" id="no_hp" name="no_hp" placeholder="0812-1111-2222">
+          </p>
+
+          <p>
+            <label for="status">Status</label>
+            <select id="status" name="status">
+              <option value="aktif">Aktif</option>
+              <option value="nonaktif">Nonaktif</option>
+            </select>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Simpan</button>
+          <button type="reset">Reset</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 AbsenUKM — Jobsheet 1: HTML5 Semantic Skeleton</p>
+  </footer>
+
+</body>
+</html>
