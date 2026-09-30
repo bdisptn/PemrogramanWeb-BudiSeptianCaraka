@@ -13,9 +13,9 @@
       <h1>AbsenUKM</h1>
       <p>Sistem Absensi Unit Kegiatan Mahasiswa</p>
     </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
     <nav aria-label="Navigasi utama">
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
       <ul>
       <li><a href="../index.html">Beranda</a></li>
       <li><a href="../anggota/list.html">Daftar Anggota</a></li>
@@ -29,7 +29,12 @@
   <main>
     <section id="rekap-presensi">
       <h2>Rekap Presensi</h2>
-      <p>Kegiatan: Latihan Rutin, 12 September 2026. Data masih berupa contoh (dummy) yang ditulis langsung di HTML.</p>
+      <p>Kegiatan: Latihan Rutin, 12 September 2026.</p>
+
+      <p class="pencarian">
+        <label for="cari">Cari presensi</label>
+        <input type="search" id="cari" name="cari" placeholder="Ketik nama, NIM, atau keterangan" data-tabel="tabel-presensi">
+      </p>
 
       <div class="table-responsive">
       <table>
@@ -103,7 +108,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 AbsenUKM — Jobsheet 1: HTML5 Semantic Skeleton</p>
+    <p>&copy; 2026 AbsenUKM — Jobsheet 3</p>
   </footer>
 
 </body>

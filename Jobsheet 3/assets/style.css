@@ -358,6 +358,10 @@ footer {
 
 /* ---------- Responsif ---------- */
 
+.table-responsive {
+    overflow-x: auto;
+}
+   
 @media (max-width: 680px) {
   /* Tampilkan ikon hamburger */
   .nav-toggle-label {
@@ -374,7 +378,7 @@ footer {
   }
 
   /* Tampilkan menu KETIKA checkbox (hamburger) dicentang/ditekan */
-  .nav-toggle:checked ~ ul {
+  .nav-toggle:checked ~ nav ul {
     display: flex;
   }
 
