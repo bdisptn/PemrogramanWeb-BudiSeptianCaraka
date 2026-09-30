@@ -1,10 +1,10 @@
 <?php
 // Konfigurasi Database
-$host = 'localhost';
-$port = '5432';
-$db   = 'absen_ukm';
-$user = 'postgres'; 
-$pass = '130905'; 
+$host = getenv('DB_HOST') ?: 'localhost';
+$port = getenv('DB_PORT') ?: '5432';
+$db   = getenv('DB_NAME') ?: 'absen_ukm';
+$user = getenv('DB_USER') ?: 'postgres';
+$pass = getenv('DB_PASSWORD') ?: '130905';
 
 $dsn = "pgsql:host=$host;port=$port;dbname=$db";
 
