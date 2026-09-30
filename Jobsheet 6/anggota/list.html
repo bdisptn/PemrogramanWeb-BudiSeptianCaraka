@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daftar Anggota — AbsenUKM</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <h1>AbsenUKM</h1>
+      <p>Sistem Absensi Unit Kegiatan Mahasiswa</p>
+    </div>
+    <!-- Penyesuaian: Menggunakan class "menu-button" agar dibaca app.js -->
+    <button type="button" class="menu-button" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="../index.html">Beranda</a></li>
+        <li><a href="list.html">Daftar Anggota</a></li>
+        <li><a href="tambah.html">Tambah Anggota</a></li>
+        <li><a href="../presensi/list.html">Rekap Presensi</a></li>
+        <li><a href="../presensi/tambah.html">Input Presensi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="daftar-anggota">
+      <h2>Daftar Anggota</h2>
+        <div class="search-box">
+          <label for="search-input">Cari Anggota</label>
+          <!-- Penyesuaian: Menambahkan data-tabel="tabel-anggota" -->
+          <input type="text" id="search-input" data-tabel="tabel-anggota" placeholder="Ketik nama anggota...">
+        </div>
+
+      <div id="loading-indicator" style="display: none; text-align: center; padding: 1rem; color: var(--muted);">
+      ⏳ Memuat data anggota dari server...
+      </div>
+
+      <div class="table-responsive">
+        <table id="tabel-anggota">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>NIM</th>
+              <th>Nama Anggota</th>
+              <th>UKM</th>
+              <th>Jabatan</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <!-- tbody dikosongkan, diisi dinamis oleh anggota.js -->
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="aksi">
+      <h2>Aksi</h2>
+      <p><a href="tambah.html">Tambah anggota baru</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 AbsenUKM — Jobsheet 5</p>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/anggota.js"></script>
+
+</body>
+</html>

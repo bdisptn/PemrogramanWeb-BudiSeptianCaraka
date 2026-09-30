@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rekap Presensi — AbsenUKM</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <h1>AbsenUKM</h1>
+      <p>Sistem Absensi Unit Kegiatan Mahasiswa</p>
+    </div>
+    <!-- Penyesuaian: Menggunakan class "menu-button" -->
+    <button type="button" class="menu-button" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="../index.html">Beranda</a></li>
+        <li><a href="../anggota/list.html">Daftar Anggota</a></li>
+        <li><a href="../anggota/tambah.html">Tambah Anggota</a></li>
+        <li><a href="list.html">Rekap Presensi</a></li>
+        <li><a href="tambah.html">Input Presensi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="rekap-presensi">
+      <h2>Rekap Presensi</h2>
+      <p>Kegiatan: Latihan Rutin, 12 September 2026.</p>
+      <div class="search-box">
+        <label for="search-input">Cari Presensi</label>
+        <!-- Penyesuaian: Menambahkan data-tabel="tabel-presensi" -->
+        <input type="text" id="search-input" data-tabel="tabel-presensi" placeholder="Ketik nama anggota...">
+      </div>
+      <div id="loading-indicator" style="display: none; text-align: center; padding: 1rem; color: var(--muted);">
+        ⏳ Memuat data presensi dari server...
+      </div>
+
+      <div class="table-responsive">
+        <table id="tabel-presensi">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>NIM</th>
+              <th>Nama Anggota</th>
+              <th>Kegiatan</th>
+              <th>Tanggal</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <!-- tbody dikosongkan, diisi dinamis oleh presensi.js -->
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="aksi">
+      <h2>Aksi</h2>
+      <p><a href="tambah.html">Input presensi baru</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 AbsenUKM — Jobsheet 5</p>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+  <script src="../assets/js/presensi.js"></script>
+
+</body>
+</html>
