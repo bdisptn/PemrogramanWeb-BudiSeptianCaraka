@@ -2,7 +2,9 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Rekap Presensi — AbsenUKM</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 
@@ -12,6 +14,11 @@
   </header>
 
   <nav aria-label="Navigasi utama">
+    <button type="button" class="menu-button" aria-label="Buka menu navigasi" aria-expanded="false">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
     <ul>
       <li><a href="../index.html">Beranda</a></li>
       <li><a href="../anggota/list.html">Daftar Anggota</a></li>
@@ -24,8 +31,15 @@
   <main>
     <section id="rekap-presensi">
       <h2>Rekap Presensi</h2>
+      <p>Kegiatan: Latihan Rutin, 12 September 2026. Data masih berupa contoh (dummy) yang ditulis langsung di HTML.</p>
 
-      <table>
+      <p class="pencarian">
+        <label for="cari">Cari presensi</label>
+        <input type="search" id="cari" name="cari" placeholder="Ketik nama, NIM, atau keterangan" data-tabel="tabel-presensi">
+      </p>
+
+      <div class="table-responsive">
+      <table id="tabel-presensi" data-kolom-nama="4">
         <caption>Rekap kehadiran anggota pada kegiatan UKM</caption>
         <thead>
           <tr>
@@ -36,6 +50,7 @@
             <th scope="col">Nama</th>
             <th scope="col">Jam Datang</th>
             <th scope="col">Keterangan</th>
+            <th scope="col">Aksi</th>
           </tr>
         </thead>
         <tbody>
@@ -47,6 +62,7 @@
             <td>Rina Marlina</td>
             <td>15:02</td>
             <td>Hadir</td>
+            <td><button type="button" class="btn-hapus">Hapus</button></td>
           </tr>
           <tr>
             <td>2</td>
@@ -56,6 +72,7 @@
             <td>Bagus Prasetyo</td>
             <td>15:10</td>
             <td>Hadir</td>
+            <td><button type="button" class="btn-hapus">Hapus</button></td>
           </tr>
           <tr>
             <td>3</td>
@@ -65,6 +82,7 @@
             <td>Siti Nurhaliza</td>
             <td>—</td>
             <td>Izin</td>
+            <td><button type="button" class="btn-hapus">Hapus</button></td>
           </tr>
           <tr>
             <td>4</td>
@@ -74,6 +92,7 @@
             <td>Dimas Anggara</td>
             <td>15:45</td>
             <td>Hadir</td>
+            <td><button type="button" class="btn-hapus">Hapus</button></td>
           </tr>
           <tr>
             <td>5</td>
@@ -83,9 +102,11 @@
             <td>Laila Fitria</td>
             <td>—</td>
             <td>Alfa</td>
+            <td><button type="button" class="btn-hapus">Hapus</button></td>
           </tr>
         </tbody>
       </table>
+      </div>
     </section>
 
     <section id="aksi">
@@ -95,7 +116,7 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 AbsenUKM — Jobsheet 1</p>
+    <p>&copy; 2026 AbsenUKM — Jobsheet 1: HTML5 Semantic Skeleton</p>
   </footer>
 
 </body>
