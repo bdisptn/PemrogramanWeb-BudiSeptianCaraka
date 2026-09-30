@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rekap Presensi — AbsenUKM</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <h1>AbsenUKM</h1>
+      <p>Sistem Absensi Unit Kegiatan Mahasiswa</p>
+    </div>
+    <!-- Penyesuaian: Menggunakan class "menu-button" -->
+    <button type="button" class="menu-button" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="../index.html">Beranda</a></li>
+        <li><a href="../anggota/list.html">Daftar Anggota</a></li>
+        <li><a href="../anggota/tambah.html">Tambah Anggota</a></li>
+        <li><a href="list.html">Rekap Presensi</a></li>
+        <li><a href="tambah.html">Input Presensi</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="rekap-presensi">
+      <h2>Rekap Presensi</h2>
+      <p>Kegiatan: Latihan Rutin, 12 September 2026.</p>
+      <div class="search-box">
+        <label for="search-input">Cari Presensi</label>
+        <!-- Penyesuaian: Menambahkan data-tabel="tabel-presensi" -->
+        <input type="text" id="search-input" data-tabel="tabel-presensi" placeholder="Ketik nama anggota...">
+      </div>
+      <div class="table-responsive">
+      <!-- Penyesuaian: Menambahkan id="tabel-presensi" dan data-kolom-nama="4" -->
+      <table id="tabel-presensi" data-kolom-nama="4">
+        <caption>Rekap kehadiran anggota pada kegiatan UKM</caption>
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Tanggal</th>
+            <th scope="col">Kegiatan</th>
+            <th scope="col">NIM</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Jam Datang</th>
+            <th scope="col">Keterangan</th>
+            <th scope="col">Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>2026-09-12</td>
+            <td>Latihan Rutin</td>
+            <td>23081010001</td>
+            <td>Rina Marlina</td>
+            <td>15:02</td>
+            <td>Hadir</td>
+            <td>
+              <button type="button">Edit</button>
+              <button type="button" class="btn-hapus">Hapus</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>2026-09-12</td>
+            <td>Latihan Rutin</td>
+            <td>23081010002</td>
+            <td>Bagus Prasetyo</td>
+            <td>15:10</td>
+            <td>Hadir</td>
+            <td>
+              <button type="button">Edit</button>
+              <button type="button" class="btn-hapus">Hapus</button>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>2026-09-12</td>
+            <td>Latihan Rutin</td>
+            <td>22081010015</td>
+            <td>Siti Nurhaliza</td>
+            <td>—</td>
+            <td>Izin</td>
+            <td>
+              <button type="button">Edit</button>
+              <button type="button" class="btn-hapus">Hapus</button>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>2026-09-12</td>
+            <td>Latihan Rutin</td>
+            <td>24081010027</td>
+            <td>Dimas Anggara</td>
+            <td>15:45</td>
+            <td>Hadir</td>
+            <td>
+              <button type="button">Edit</button>
+              <button type="button" class="btn-hapus">Hapus</button>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>2026-09-12</td>
+            <td>Latihan Rutin</td>
+            <td>22081010040</td>
+            <td>Laila Fitria</td>
+            <td>—</td>
+            <td>Alfa</td>
+            <td>
+              <button type="button">Edit</button>
+              <button type="button" class="btn-hapus">Hapus</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <section id="aksi">
+      <h2>Aksi</h2>
+      <p><a href="tambah.html">Input presensi baru</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 AbsenUKM — Jobsheet 5</p>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+
+</body>
+</html>
